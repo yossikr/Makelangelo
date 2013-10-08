@@ -8,6 +8,9 @@
 
 
 // io functions
+
+
+import processing.core.PApplet;
 import gnu.io.*;
 
 import java.awt.*;
@@ -34,6 +37,8 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.prefs.Preferences;
 
+
+
 //@TODO: in-app gcode editing with immediate visusal feedback - only while not drawing
 //@TODO: image processing options - cutoff, exposure, resolution, voronoi stipples?
 //@TODO: vector output?  stl input?
@@ -43,11 +48,12 @@ public class DrawbotGUI
 		implements ActionListener, SerialPortEventListener
 {
 	// software version
-	static final String version="0.9.9";
+	static final String version="1";
 	
 	static final long serialVersionUID=1;
 	
 	private static DrawbotGUI singletonObject;
+    private static ThinkGearWrapper thinkGearWrapper;
 	   
 	// Serial connection
 	private static int BAUD_RATE = 57600;
@@ -71,8 +77,6 @@ public class DrawbotGUI
 	private String[] recentFiles;
 	private String recentPort;
 	private boolean allowMetrics=true;
-    static private boolean inCollectMode = false; // This is used in ProcessLine() - Lines are collected when here
-    ArrayList<String> SavedLines = null;// The lines that are collected will be saved here;
 	
 	// Metrics
 	PublishImage reportImage = new PublishImage();
@@ -778,7 +782,7 @@ public class DrawbotGUI
 		d.anchor=GridBagConstraints.WEST;
 
 		c.gridx=0; c.gridy=5; c.gridwidth=4; c.gridheight=1;
-		driver.add(new JLabel("All values in millimeters."),c);
+		driver.add(new JLabel("All values in mm."),c);
 		c.gridwidth=1;
 		
 		c.ipadx=3;
@@ -935,8 +939,8 @@ public class DrawbotGUI
 		final JDialog driver = new JDialog(mainframe,"Configure Bobbins",true);
 		driver.setLayout(new GridBagLayout());
 
-		final JTextField mBobbin1 = new JTextField(String.valueOf(bobbin_left_diameter));
-		final JTextField mBobbin2 = new JTextField(String.valueOf(bobbin_right_diameter));
+		final JTextField mBobbin1 = new JTextField(String.valueOf(bobbin_left_diameter*10));
+		final JTextField mBobbin2 = new JTextField(String.valueOf(bobbin_right_diameter*10));
 
 		final JButton cancel = new JButton("Cancel");
 		final JButton save = new JButton("Save");
@@ -950,12 +954,12 @@ public class DrawbotGUI
 		c.gridx=1;	c.gridy=1;	driver.add(mBobbin1,c);
 		c.gridx=1;	c.gridy=2;	driver.add(mBobbin2,c);
 
+		c.gridx=2;  c.gridy=1;  driver.add(new JLabel("mm"),c);
+		c.gridx=2;  c.gridy=2;  driver.add(new JLabel("mm"),c);
+
 		c.gridx=0;  c.gridy=3;  driver.add(save,c);
 		c.gridx=1;  c.gridy=3;  driver.add(cancel,c);
 		
-		c.gridx=0;  c.gridy=4;  c.gridwidth=2;  c.gridheight=2;
-		driver.add(new JLabel("All values in cm."),c);
-
 		Dimension s=mBobbin1.getPreferredSize();
 		s.width=80;
 		mBobbin1.setPreferredSize(s);
@@ -965,8 +969,8 @@ public class DrawbotGUI
 			  public void actionPerformed(ActionEvent e) {
 					Object subject = e.getSource();
 					if(subject == save) {
-						bobbin_left_diameter = Double.valueOf(mBobbin1.getText());
-						bobbin_right_diameter = Double.valueOf(mBobbin2.getText());
+						bobbin_left_diameter = Double.valueOf(mBobbin1.getText())/10.0;
+						bobbin_right_diameter = Double.valueOf(mBobbin2.getText())/10.0;
 						boolean data_is_sane=true;
 						if( bobbin_left_diameter <= 0 ) data_is_sane=false;
 						if( bobbin_right_diameter <= 0 ) data_is_sane=false;
@@ -1095,56 +1099,23 @@ public class DrawbotGUI
 		  SendLineToRobot(line);
 		  return true;
         }
-
-
-        if (inCollectMode)  {
-            //end of circle
-            if(tokens[0].equals("M300") && tokens[3].equals("up)")) {
-                inCollectMode = false;
-                ManipulateAndSendArray(SavedLines);
-                return true;
-            }
-
-            if(tokens[0].startsWith("M")) {
-                Log("<font color='pink'>"+line+"</font>\n");
-                return true;
-            }
-
-            //Todo - do we want also to save brainwave data here too.
-            SavedLines.add(line);
-            return true;
-        }
-        // other machine code to ignore?
-        if(tokens[0].startsWith("M")) {
-            Log("<font color='pink'>"+line+"</font>\n");
-            return true;
-        }
-
-
+		
+		// other machine code to ignore?
+		if(tokens[0].startsWith("M")) {
+			Log("<font color='pink'>"+line+"</font>\n");
+			return true;
+		} 
 
 		// contains a comment?  if so remove it
 		int index=line.indexOf('(');
 		if(index!=-1) {
-            if (tokens[0].equals("(Polyline")) {
-                if (inCollectMode)   {
-                    //Todo: need to manage case where a new circle starts before old one done
-                }
-                inCollectMode = true;
-                SavedLines = new ArrayList<String>();
-                //Todo: do we want to log something here
-                // the line was like (Polyline consisting of 1 segments.)
-                // This was the way a circle starts in our gcode
-                return true;   // still ready to send
-            }
-            else {
-                String comment=line.substring(index+1,line.lastIndexOf(')'));
-                line=line.substring(0,index).trim();
-                Log("<font color='grey'>* "+comment+"</font\n");
-                if(line.length()==0) {
-                    // entire line was a comment.
-                    return true;  // still ready to send
-                }
-            }
+			String comment=line.substring(index+1,line.lastIndexOf(')'));
+			line=line.substring(0,index).trim();
+			Log("<font color='grey'>* "+comment+"</font\n");
+			if(line.length()==0) {
+				// entire line was a comment.
+				return true;  // still ready to send
+			}
 		}
 		
 		// contains a pen-up command?
@@ -1164,29 +1135,11 @@ public class DrawbotGUI
 		// send relevant part of line to the robot
 
 		SendLineToRobot(line);
+		
 		return false;
 	}
 
-
-
-    protected void ManipulateAndSendArray(ArrayList<String> savedLines) {
-        String line;
-        int i;
-
-        for(i=0 ; i < savedLines.size();i++)  {
-             line = savedLines.get(i);
-             //Todo: Is delay needed at all is it enough
-            try {
-                Thread.sleep(150);
-            } catch (InterruptedException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            }
-            SendLineToRobot(line);
-        }
-        SavedLines = null;
-    }
-
-    /**
+	/**
 	 * Sends a single command the robot.  Could be anything.
 	 * @param line command to send.
 	 * @return true means the command is sent.  false means it was not.
@@ -1298,8 +1251,8 @@ public class DrawbotGUI
 		if( subject == buttonAbout ) {
 			JOptionPane.showMessageDialog(null,"Makelangelo v"+version+"\n\n"
 					+"Created by Dan Royer (dan@marginallyclever.com).\n\n"
-					+"Get the latest version and read the documentation @ http://github.com/i-make-robots/DrawBot/\n"
-					+"Find out more at http://www.marginallyclever.com/\n");
+					+"Get the latest version and read the documentation @ https://github.com/MarginallyClever/Makelangelo\n"
+					+"Find out more at http://www.makelangelo.com/\n");
 			return;
 		}
 		if( subject == buttonCheckForUpdate ) {
@@ -1861,9 +1814,16 @@ public class DrawbotGUI
         drive_and_preview.add(drivePane);
         drive_and_preview.setDividerSize(8);
         drive_and_preview.setDividerLocation(-100);
-        
+
+        Splitter topPane =  new Splitter(JSplitPane.HORIZONTAL_SPLIT);
+        topPane.add(previewPane);
+        topPane.add(thinkGearWrapper);
+        topPane.setDividerSize(8);
+        topPane.setDividerLocation(-100);
+        thinkGearWrapper.init();
+
         Splitter split = new Splitter(JSplitPane.VERTICAL_SPLIT);
-        split.add(previewPane);
+        split.add(topPane);
         split.add(drive_and_preview);
         split.setDividerSize(8);
 
@@ -1935,8 +1895,29 @@ public class DrawbotGUI
 	    	        }
 	            }
 	    		*/
+
+                thinkGearWrapper = new ThinkGearWrapper();
+                //PApplet.main(new String[] { "ThinkGearWrapper" });
 	            CreateAndShowGUI();
 	        }
 	    });
     }
 }
+
+
+/**
+ * This file is part of DrawbotGUI.
+ *
+ * DrawbotGUI is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * DrawbotGUI is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+ */
