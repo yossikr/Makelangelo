@@ -77,6 +77,8 @@ public class DrawbotGUI
 	private String[] recentFiles;
 	private String recentPort;
 	private boolean allowMetrics=true;
+    static private boolean inCollectMode = false; // This is used in ProcessLine() - Lines are collected when here
+    ArrayList<String> SavedLines = null;// The lines that are collected will be saved here;
 	
 	// Metrics
 	PublishImage reportImage = new PublishImage();
@@ -1099,7 +1101,25 @@ public class DrawbotGUI
 		  SendLineToRobot(line);
 		  return true;
         }
-		
+
+        if (inCollectMode)  {
+            //end of circle
+            if(tokens[0].equals("M300") && tokens[3].equals("up)")) {
+                inCollectMode = false;
+                ManipulateAndSendArray(SavedLines);
+                return true;
+            }
+
+            if(tokens[0].startsWith("M")) {
+                Log("<font color='pink'>"+line+"</font>\n");
+                return true;
+            }
+
+            //Todo - do we want also to save brainwave data here too.
+            SavedLines.add(line);
+            return true;
+        }
+
 		// other machine code to ignore?
 		if(tokens[0].startsWith("M")) {
 			Log("<font color='pink'>"+line+"</font>\n");
@@ -1109,13 +1129,26 @@ public class DrawbotGUI
 		// contains a comment?  if so remove it
 		int index=line.indexOf('(');
 		if(index!=-1) {
-			String comment=line.substring(index+1,line.lastIndexOf(')'));
-			line=line.substring(0,index).trim();
-			Log("<font color='grey'>* "+comment+"</font\n");
-			if(line.length()==0) {
-				// entire line was a comment.
-				return true;  // still ready to send
-			}
+            if (tokens[0].equals("(Polyline")) {
+                if (inCollectMode)   {
+                    //Todo: need to manage case where a new circle starts before old one done
+                }
+                inCollectMode = true;
+                SavedLines = new ArrayList<String>();
+                //Todo: do we want to log something here
+                // the line was like (Polyline consisting of 1 segments.)
+                // This was the way a circle starts in our gcode
+                return true;   // still ready to send
+            }
+            else {
+                String comment=line.substring(index+1,line.lastIndexOf(')'));
+                line=line.substring(0,index).trim();
+                Log("<font color='grey'>* "+comment+"</font\n");
+                if(line.length()==0) {
+                    // entire line was a comment.
+                    return true;  // still ready to send
+                }
+            }
 		}
 		
 		// contains a pen-up command?
@@ -1139,7 +1172,39 @@ public class DrawbotGUI
 		return false;
 	}
 
-	/**
+    protected void ManipulateAndSendArray(ArrayList<String> savedLines) {
+        String line;
+        int i;
+        int attention;
+        int meditation;
+        meditation = thinkGearWrapper.getAvgMeditation();
+        attention = thinkGearWrapper.getAvgAttention();
+
+
+        for(i=0 ; i < savedLines.size();i++)  {
+            line = savedLines.get(i);
+            //Todo: Is delay needed at all is it enough
+            try {
+                Thread.sleep(150);
+            } catch (InterruptedException e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            }
+            String [] tokens = line.split("\\s");
+            if (tokens[0].equals("G1")) {
+                Double x = null;
+                Double y;
+                if (tokens[1].startsWith("X")){
+                    String tmp = tokens[1].substring(1);
+                    x =  Double.parseDouble(tmp) ;
+                }
+                x+=0.17;
+            }
+            SendLineToRobot(line);
+        }
+        SavedLines = null;
+    }
+
+    /**
 	 * Sends a single command the robot.  Could be anything.
 	 * @param line command to send.
 	 * @return true means the command is sent.  false means it was not.

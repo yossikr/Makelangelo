@@ -1,6 +1,5 @@
 /**
  * Created with IntelliJ IDEA.
- * User: mzirin
  * Date: 10/5/13
  * Time: 9:49 PM
  * To change this template use File | Settings | File Templates.
@@ -18,11 +17,15 @@ public class ThinkGearWrapper extends PApplet {
     public int attention=10;
     public int meditation=10;
     public PFont font;
+    HeadsetValues eegValues;
 
 
     public void setup() {
         size(700,700);
+
         ThinkGearSocket neuroSocket = new ThinkGearSocket(this);
+        eegValues = new HeadsetValues(10);
+
         try {
             neuroSocket.start();
         }
@@ -61,18 +64,23 @@ public class ThinkGearWrapper extends PApplet {
     }
 
     public void poorSignalEvent(int sig) {
-        println("SignalEvent "+sig);
+
+        if (sig > 10) {
+            eegValues.clearLast();
+        }
     }
 
     public void attentionEvent(int attentionLevel) {
         println("Attention Level: " + attentionLevel);
         attention = attentionLevel;
+        eegValues.addAttention(attentionLevel);
     }
 
 
     public void meditationEvent(int meditationLevel) {
         println("Meditation Level: " + meditationLevel);
         meditation = meditationLevel;
+        eegValues.addMeditation(meditationLevel);
     }
 
     public void blinkEvent(int blinkStrength) {
@@ -100,5 +108,12 @@ public class ThinkGearWrapper extends PApplet {
         super.stop();
     }
 
+    public int getAvgAttention() {
+        return eegValues.getAvgAttention();
+    }
 
+
+    public int getAvgMeditation()  {
+        return eegValues.getAvgMeditation();
+    }
 }
