@@ -5,117 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="d25badbb-8bcd-43e9-afc2-db13c6b0330d" name="Default" comment="Add code provided by both Toms.&#10;performing commit  because I plan to make more radical changes">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/.idea" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/CDL.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/Cookie.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/CookieList.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/DistanceMetric.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/DrawPanel.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/DrawbotGUI$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/DrawbotGUI$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/DrawbotGUI$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/DrawbotGUI$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/DrawbotGUI$5.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/DrawbotGUI$6.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/DrawbotGUI$7.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/DrawbotGUI$8.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/DrawbotGUI$Splitter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/DrawbotGUI.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/DrawbotGUI.icns" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/Filter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/Filter_BlackAndWhite.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/Filter_DitherFloydSteinberg.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/Filter_Resize.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/Filter_TSPGcodeGenerator$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/Filter_TSPGcodeGenerator$TSPOptimizer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/Filter_TSPGcodeGenerator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/GCodeFile.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/HTTP.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/HTTPTokener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/JSONArray.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/JSONException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/JSONML.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/JSONObject$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/JSONObject$Null.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/JSONObject.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/JSONString.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/JSONStringer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/JSONTokener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/JSONWriter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Linux" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Mac_OS_X" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/Point2D.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/Point3D.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/PublishImage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Windows/x64/RXTXcomm.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Solaris" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/StatusBar.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/neurosky/ThinkGearSocket.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/ThinkGearWrapper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Windows" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/XML.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/XMLTokener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/appbundler-1.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/.idea/copyright" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Windows/i368-mingw32" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Linux/i686-unknown-linux-gnu" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Linux/ia64-unkown-linux-gnu" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/.idea/libraries" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Mac_OS_X/librxtxSerial.jnilib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/neurosky" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Windows/i368-mingw32/rxtxParallel.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Windows/x64/rxtxParallel.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Windows/i368-mingw32/rxtxSerial.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Windows/x64/rxtxSerial.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/.idea/scopes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Solaris/sparc-solaris" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Solaris/sparc-solaris/sparc32-sun-solaris2.8" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Solaris/sparc-solaris/sparc64-sun-solaris2.8" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Windows/x64" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Linux/x86_64-unknown-linux-gnu" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Drawbot.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HeadsetValues.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/org/json/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Mac_OS_X/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/rxtxnative/Windows/i368-mingw32/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/RXTXcomm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/.idea/libraries/RXTXcomm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/.idea/libraries/appbundler_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/core.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/osx_build_app.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/.idea/libraries/processing_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/trunk.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/out/production/trunk/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DrawbotGUI.java" afterPath="$PROJECT_DIR$/src/DrawbotGUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ThinkGearWrapper.java" afterPath="$PROJECT_DIR$/src/ThinkGearWrapper.java" />
     </list>
@@ -124,8 +13,8 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/fragment.java" changelist="d25badbb-8bcd-43e9-afc2-db13c6b0330d" time="1381321967211" ignored="false" />
     <file path="/HeadsetValues.java" changelist="d25badbb-8bcd-43e9-afc2-db13c6b0330d" time="1381323192564" ignored="false" />
-    <file path="/ThinkGearWrapper.java" changelist="d25badbb-8bcd-43e9-afc2-db13c6b0330d" time="1381329216412" ignored="false" />
-    <file path="/DrawbotGUI.java" changelist="d25badbb-8bcd-43e9-afc2-db13c6b0330d" time="1381332947339" ignored="false" />
+    <file path="/ThinkGearWrapper.java" changelist="d25badbb-8bcd-43e9-afc2-db13c6b0330d" time="1381339101772" ignored="false" />
+    <file path="/DrawbotGUI.java" changelist="d25badbb-8bcd-43e9-afc2-db13c6b0330d" time="1381342787272" ignored="false" />
     <file path="/Dummy.txt" changelist="d25badbb-8bcd-43e9-afc2-db13c6b0330d" time="1381334841212" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -141,6 +30,39 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/DrawbotGUI.java" line="1034" class="DrawbotGUI" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/DrawbotGUI.java" line="1155" class="DrawbotGUI" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -177,24 +99,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/DrawbotGUI.java" line="1054" class="DrawbotGUI" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -204,14 +108,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DrawbotGUI.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DrawbotGUI.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DrawbotGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1057" column="75" selection-start="34026" selection-end="34026" vertical-scroll-proportion="-5.92">
+            <state line="7" column="157" selection-start="140" selection-end="140" vertical-scroll-proportion="-7.1410656">
               <folding>
-                <element signature="e#0#65530#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#12863#12893#1" expanded="true" />
+                <element signature="e#12656#12686#1" expanded="true" />
+                <element signature="e#12853#12861#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThinkGearSocket.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/neurosky/ThinkGearSocket.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="86" column="28" selection-start="3074" selection-end="3089" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#13510#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -238,18 +153,16 @@
       <file leaf-file-name="ThinkGearWrapper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ThinkGearWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="110" selection-start="464" selection-end="464" vertical-scroll-proportion="-13.6">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="24" column="54" selection-start="541" selection-end="541" vertical-scroll-proportion="-3.2">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cookie.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Cookie.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/json/Cookie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="13" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.3326923">
+            <state line="32" column="13" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -258,7 +171,7 @@
       <file leaf-file-name="GCodeFile.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GCodeFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="16" selection-start="3539" selection-end="3539" vertical-scroll-proportion="-6.56">
+            <state line="14" column="13" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -275,8 +188,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/HeadsetValues.java" />
-        <option value="$PROJECT_DIR$/src/DrawbotGUI.java" />
+        <option value="$PROJECT_DIR$/src/GCodeFile.java" />
         <option value="$PROJECT_DIR$/src/ThinkGearWrapper.java" />
+        <option value="$PROJECT_DIR$/src/DrawbotGUI.java" />
       </list>
     </option>
   </component>
@@ -312,80 +226,51 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Drawbot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Drawbot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Drawbot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Drawbot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="json" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="241" />
     <property name="project.structure.last.edited" value="Libraries" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="241" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="75" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="241" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="206" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="200" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="211" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Windows/64/RXTXcomm.jar!/" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="886" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="211" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="916" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Application.DrawbotGUI">
@@ -425,6 +310,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -450,19 +348,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -517,6 +402,9 @@
     <option name="analysisUIOptions">
       <AnalysisUIOptions />
     </option>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value="ALPHA_COMPARATOR" />
   </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true" SSL_PROTOCOLS="all">
     <option name="USER" value="" />
@@ -573,23 +461,23 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292232" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43649817" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3267571" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292232" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3267571" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17245305" sideWeight="0.6732429" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292232" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24871941" sideWeight="0.6732429" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54401803" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24871941" sideWeight="0.6732429" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5437731" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292232" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -664,9 +552,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#65530#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#12863#12893#1" expanded="true" />
+            <element signature="e#12656#12686#1" expanded="true" />
+            <element signature="e#12853#12861#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -675,9 +563,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#65530#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#12863#12893#1" expanded="true" />
+            <element signature="e#12656#12686#1" expanded="true" />
+            <element signature="e#12853#12861#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -686,9 +574,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#65530#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#12863#12893#1" expanded="true" />
+            <element signature="e#12656#12686#1" expanded="true" />
+            <element signature="e#12853#12861#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -697,9 +585,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#65530#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#12863#12893#1" expanded="true" />
+            <element signature="e#12656#12686#1" expanded="true" />
+            <element signature="e#12853#12861#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -708,9 +596,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#65530#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#12863#12893#1" expanded="true" />
+            <element signature="e#12656#12686#1" expanded="true" />
+            <element signature="e#12853#12861#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -719,9 +607,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#65530#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#12863#12893#1" expanded="true" />
+            <element signature="e#12656#12686#1" expanded="true" />
+            <element signature="e#12853#12861#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -754,51 +642,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/neurosky/ThinkGearSocket.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/com/sun/java/swing/plaf/gtk/GTKFileChooserUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="328" column="54" selection-start="8861" selection-end="8861" vertical-scroll-proportion="0.5996055">
+        <state line="55" column="6" selection-start="889" selection-end="889" vertical-scroll-proportion="0.3596154" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/json/Cookie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="13" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/com/sun/java/swing/plaf/gtk/GTKFileChooserUI.java">
+    <entry file="file://$PROJECT_DIR$/src/neurosky/ThinkGearSocket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="6" selection-start="889" selection-end="889" vertical-scroll-proportion="0.3596154">
-          <folding />
+        <state line="86" column="28" selection-start="3074" selection-end="3089" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#13510#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GCodeFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="16" selection-start="3539" selection-end="3539" vertical-scroll-proportion="-6.56">
+        <state line="14" column="13" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ThinkGearWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="54" selection-start="541" selection-end="541" vertical-scroll-proportion="-3.2">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DrawbotGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1057" column="75" selection-start="34026" selection-end="34026" vertical-scroll-proportion="-5.92">
+        <state line="7" column="157" selection-start="140" selection-end="140" vertical-scroll-proportion="-7.1410656">
           <folding>
-            <element signature="e#0#65530#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#12863#12893#1" expanded="true" />
+            <element signature="e#12656#12686#1" expanded="true" />
+            <element signature="e#12853#12861#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ThinkGearWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="110" selection-start="464" selection-end="464" vertical-scroll-proportion="-13.6">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/json/Cookie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="13" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.3326923">
-          <folding />
         </state>
       </provider>
     </entry>

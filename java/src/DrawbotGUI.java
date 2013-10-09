@@ -77,8 +77,6 @@ public class DrawbotGUI
 	private String[] recentFiles;
 	private String recentPort;
 	private boolean allowMetrics=true;
-    static private boolean inCollectMode = false; // This is used in ProcessLine() - Lines are collected when here
-    ArrayList<String> SavedLines = null;// The lines that are collected will be saved here;
 	
 	// Metrics
 	PublishImage reportImage = new PublishImage();
@@ -521,7 +519,7 @@ public class DrawbotGUI
 		paper_left=Double.parseDouble(prefs.get(id+"_paper_left","0"));
 		paper_right=Double.parseDouble(prefs.get(id+"_paper_right","0"));
 		paper_top=Double.parseDouble(prefs.get(id+"_paper_top","0"));
-		paper_bottom=Double.parseDouble(prefs.get(id+"_paper_bottom","0"));
+		paper_bottom=Double.parseDouble(prefs.get(id + "_paper_bottom", "0"));
 	}
 	
 	/**
@@ -1051,6 +1049,7 @@ public class DrawbotGUI
 		do {			
 			// are there any more commands?
 			// @TODO: find out how far the pen moved each line and add it to the distance total.
+            MindManipulateGcode();
 			line=gcode.lines.get((int)gcode.linesProcessed++).trim();
 			previewPane.setLinesProcessed(gcode.linesProcessed);
 			statusBar.SetProgress(gcode.linesProcessed, gcode.linesTotal);
@@ -1101,25 +1100,7 @@ public class DrawbotGUI
 		  SendLineToRobot(line);
 		  return true;
         }
-
-        if (inCollectMode)  {
-            //end of circle
-            if(tokens[0].equals("M300") && tokens[3].equals("up)")) {
-                inCollectMode = false;
-                ManipulateAndSendArray(SavedLines);
-                return true;
-            }
-
-            if(tokens[0].startsWith("M")) {
-                Log("<font color='pink'>"+line+"</font>\n");
-                return true;
-            }
-
-            //Todo - do we want also to save brainwave data here too.
-            SavedLines.add(line);
-            return true;
-        }
-
+		
 		// other machine code to ignore?
 		if(tokens[0].startsWith("M")) {
 			Log("<font color='pink'>"+line+"</font>\n");
@@ -1129,26 +1110,13 @@ public class DrawbotGUI
 		// contains a comment?  if so remove it
 		int index=line.indexOf('(');
 		if(index!=-1) {
-            if (tokens[0].equals("(Polyline")) {
-                if (inCollectMode)   {
-                    //Todo: need to manage case where a new circle starts before old one done
-                }
-                inCollectMode = true;
-                SavedLines = new ArrayList<String>();
-                //Todo: do we want to log something here
-                // the line was like (Polyline consisting of 1 segments.)
-                // This was the way a circle starts in our gcode
-                return true;   // still ready to send
-            }
-            else {
-                String comment=line.substring(index+1,line.lastIndexOf(')'));
-                line=line.substring(0,index).trim();
-                Log("<font color='grey'>* "+comment+"</font\n");
-                if(line.length()==0) {
-                    // entire line was a comment.
-                    return true;  // still ready to send
-                }
-            }
+			String comment=line.substring(index+1,line.lastIndexOf(')'));
+			line=line.substring(0,index).trim();
+			Log("<font color='grey'>* "+comment+"</font\n");
+			if(line.length()==0) {
+				// entire line was a comment.
+				return true;  // still ready to send
+			}
 		}
 		
 		// contains a pen-up command?
@@ -1172,39 +1140,108 @@ public class DrawbotGUI
 		return false;
 	}
 
-    protected void ManipulateAndSendArray(ArrayList<String> savedLines) {
-        String line;
+    protected void MindManipulateGcode() {
+        String current_line;
+        int current_line_index;
+
+        String swap_line = null;
+        int swap_line_index;
+
         int i;
-        int attention;
-        int meditation;
-        meditation = thinkGearWrapper.getAvgMeditation();
-        attention = thinkGearWrapper.getAvgAttention();
+        int number_of_switch_lines = 4;
+
+        Double x = 0.0;
+        Double y = 0.0;
+
+        boolean is_relaxed = thinkGearWrapper.isRelaxed();
+        boolean is_attentive = thinkGearWrapper.isAttentive();
+
+        // If you are focused all will stay the same no matter what your mood is.
+        if (is_attentive) return;
 
 
-        for(i=0 ; i < savedLines.size();i++)  {
-            line = savedLines.get(i);
-            //Todo: Is delay needed at all is it enough
-            try {
-                Thread.sleep(150);
-            } catch (InterruptedException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            }
-            String [] tokens = line.split("\\s");
-            if (tokens[0].equals("G1")) {
-                Double x = null;
-                Double y;
-                if (tokens[1].startsWith("X")){
-                    String tmp = tokens[1].substring(1);
-                    x =  Double.parseDouble(tmp) ;
-                }
-                x+=0.17;
-            }
-            SendLineToRobot(line);
+        current_line_index= (int)gcode.linesProcessed;
+        current_line=gcode.lines.get(current_line_index).trim();
+
+        // replacing only gcode lines
+        if (! current_line.startsWith("G1 ")) {
+            return;
         }
-        SavedLines = null;
-    }
 
-    /**
+
+
+        //If Relaxed Switch to a close Line
+        // If not switch to a Far Line
+        if (is_relaxed) {
+            swap_line_index = current_line_index + 4;
+        }
+        else {
+            swap_line_index = current_line_index + 25;
+        }
+
+        // replace with the next G1 after the place where we are
+        while(swap_line_index <gcode.linesTotal) {
+            swap_line = gcode.lines.get(swap_line_index).trim();
+            if (swap_line.startsWith("G1 ")) {
+                break;
+            }
+            swap_line_index++;
+        }
+
+        // If we got to the end
+        if (swap_line_index >= gcode.linesTotal) {
+              return;
+        }
+
+
+        gcode.lines.set(swap_line_index, current_line);
+        gcode.lines.set(current_line_index, swap_line);
+
+        /*Todo: Is delay needed at all is it enough
+        try {
+            Thread.sleep(150);
+        } catch (InterruptedException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+           */
+
+
+        /**       The code below is for the case we want to change gcode. now we will go for switching lines
+
+         String [] tokens = current_line.split("\\s");
+
+         // Currently "playing" only with G1 commands
+         if (!tokens[0].equals("G1")) {
+         return;
+         }
+
+         // Now we are in a G1 command lets get X and Y
+        if (tokens[1].startsWith("X")){
+            String tmp = tokens[1].substring(1);
+            x =  Double.parseDouble(tmp) ;
+        }
+        else {
+            //Todo: error in gc
+            return;
+        }
+
+        if (tokens[1].startsWith("Y")){
+            String tmp = tokens[2].substring(1);
+            x =  Double.parseDouble(tmp) ;
+        }
+        else {
+            //Todo: error in gc
+            return;
+        }
+
+
+         */
+
+
+
+	}
+
+	/**
 	 * Sends a single command the robot.  Could be anything.
 	 * @param line command to send.
 	 * @return true means the command is sent.  false means it was not.
@@ -1653,6 +1690,9 @@ public class DrawbotGUI
 	}
 	
 	public void CheckForUpdate() {
+        //Todo: if this gets on day merged back this part should be removed.
+        return;
+        /*
 		try {
 		    // Get Github info
 			URL github = new URL("http://www.marginallyclever.com/other/makelangelo-version.php");
@@ -1667,6 +1707,7 @@ public class DrawbotGUI
 	        }
 	        in.close();
 		} catch (Exception e) {}
+		*/
 	}
 
 	// Rebuild the contents of the menu based on current program state

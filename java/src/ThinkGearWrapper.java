@@ -16,6 +16,8 @@ public class ThinkGearWrapper extends PApplet {
     public ThinkGearSocket neuroSocket;
     public int attention=10;
     public int meditation=10;
+    public int attention_treshold=90;
+    public int meditation_treshold=90;
     public PFont font;
     HeadsetValues eegValues;
 
@@ -116,4 +118,25 @@ public class ThinkGearWrapper extends PApplet {
     public int getAvgMeditation()  {
         return eegValues.getAvgMeditation();
     }
+
+    public boolean isAttentive()  {
+        int attention;
+        attention = getAvgAttention();
+        if (attention >= attention_treshold )  {
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean isRelaxed()  {
+        int meditation;
+        meditation = getAvgMeditation();
+        if (meditation >= meditation_treshold )  {
+            return true;
+        }
+
+        return false;
+    }
+
 }
