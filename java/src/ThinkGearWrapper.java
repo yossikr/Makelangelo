@@ -16,15 +16,17 @@ public class ThinkGearWrapper extends PApplet {
     public ThinkGearSocket neuroSocket;
     public int attention=10;
     public int meditation=10;
-    public int attention_treshold=90;
-    public int meditation_treshold=90;
+    public int attention_treshold=0;
+    public int meditation_treshold=0;
     public PFont font;
     HeadsetValues eegValues;
+    //TProgressBar  progress;
 
 
     public void setup() {
         size(700,700);
 
+        //this.progress=new TProgressBar(this, 300,50,10,100);
         ThinkGearSocket neuroSocket = new ThinkGearSocket(this);
         eegValues = new HeadsetValues(10);
 
@@ -41,6 +43,10 @@ public class ThinkGearWrapper extends PApplet {
     }
 
     public void draw() {
+
+        //this.progress.setValue(frameCount);
+        //this.progress.draw();
+
         //background(0,0,0,50);
         fill(0, 0,0, 255);
         noStroke();
@@ -91,14 +97,14 @@ public class ThinkGearWrapper extends PApplet {
     }
 
     public void eegEvent(int delta, int theta, int low_alpha, int high_alpha, int low_beta, int high_beta, int low_gamma, int mid_gamma) {
-        println("delta Level: " + delta);
-        println("theta Level: " + theta);
-        println("low_alpha Level: " + low_alpha);
-        println("high_alpha Level: " + high_alpha);
-        println("low_beta Level: " + low_beta);
-        println("high_beta Level: " + high_beta);
-        println("low_gamma Level: " + low_gamma);
-        println("mid_gamma Level: " + mid_gamma);
+//        println("delta Level: " + delta);
+//        println("theta Level: " + theta);
+//        println("low_alpha Level: " + low_alpha);
+       println("high_alpha Level: " + high_alpha);
+//        println("low_beta Level: " + low_beta);
+//        println("high_beta Level: " + high_beta);
+//        println("low_gamma Level: " + low_gamma);
+//        println("mid_gamma Level: " + mid_gamma);
     }
 
     void rawEvent(int[] raw) {

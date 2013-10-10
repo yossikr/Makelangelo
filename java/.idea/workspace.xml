@@ -5,17 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="d25badbb-8bcd-43e9-afc2-db13c6b0330d" name="Default" comment="Add code provided by both Toms.&#10;performing commit  because I plan to make more radical changes">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TProgressBar.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DrawbotGUI.java" afterPath="$PROJECT_DIR$/src/DrawbotGUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HeadsetValues.java" afterPath="$PROJECT_DIR$/src/HeadsetValues.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ThinkGearWrapper.java" afterPath="$PROJECT_DIR$/src/ThinkGearWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="377a30e8-1b30-40d1-95d0-55e63ec6d5d8" name="Rejected commit: Default" comment="Add code provided by both Toms.&#10;performing commit  because I plan to make more radical changes" />
     <ignored path="Drawbot.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="d25badbb-8bcd-43e9-afc2-db13c6b0330d" time="1381321967211" ignored="false" />
+    <file path="/fragment.java" changelist="d25badbb-8bcd-43e9-afc2-db13c6b0330d" time="1381423626239" ignored="false" />
     <file path="/HeadsetValues.java" changelist="d25badbb-8bcd-43e9-afc2-db13c6b0330d" time="1381323192564" ignored="false" />
-    <file path="/ThinkGearWrapper.java" changelist="d25badbb-8bcd-43e9-afc2-db13c6b0330d" time="1381339101772" ignored="false" />
-    <file path="/DrawbotGUI.java" changelist="d25badbb-8bcd-43e9-afc2-db13c6b0330d" time="1381342787272" ignored="false" />
-    <file path="/Dummy.txt" changelist="d25badbb-8bcd-43e9-afc2-db13c6b0330d" time="1381334841212" ignored="false" />
+    <file path="/ThinkGearWrapper.java" changelist="d25badbb-8bcd-43e9-afc2-db13c6b0330d" time="1381423502354" ignored="false" />
+    <file path="/DrawbotGUI.java" changelist="d25badbb-8bcd-43e9-afc2-db13c6b0330d" time="1381433014779" ignored="false" />
+    <file path="/Dummy.txt" changelist="d25badbb-8bcd-43e9-afc2-db13c6b0330d" time="1381433863342" ignored="false" />
+    <file path="/TProgressBar.java" changelist="d25badbb-8bcd-43e9-afc2-db13c6b0330d" time="1381419112253" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,22 +35,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/DrawbotGUI.java" line="1034" class="DrawbotGUI" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/DrawbotGUI.java" line="1155" class="DrawbotGUI" package="">
+      <breakpoint url="file://$PROJECT_DIR$/src/DrawbotGUI.java" line="1035" class="DrawbotGUI" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -111,11 +100,9 @@
       <file leaf-file-name="DrawbotGUI.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DrawbotGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="157" selection-start="140" selection-end="140" vertical-scroll-proportion="-7.1410656">
+            <state line="1164" column="43" selection-start="36674" selection-end="36674" vertical-scroll-proportion="0.67286247">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#12656#12686#1" expanded="true" />
-                <element signature="e#12853#12861#0" expanded="true" />
+                <element signature="e#12740#12770#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,9 +112,7 @@
         <entry file="file://$PROJECT_DIR$/src/neurosky/ThinkGearSocket.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="86" column="28" selection-start="3074" selection-end="3089" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#13510#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,8 +138,30 @@
       <file leaf-file-name="ThinkGearWrapper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ThinkGearWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="54" selection-start="541" selection-end="541" vertical-scroll-proportion="-3.2">
+            <state line="18" column="34" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HeadsetValues.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HeadsetValues.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="0" selection-start="1609" selection-end="1827" vertical-scroll-proportion="-5.16">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TProgressBar.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TProgressBar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="19" selection-start="1752" selection-end="1752" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -187,18 +194,18 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/HeadsetValues.java" />
         <option value="$PROJECT_DIR$/src/GCodeFile.java" />
+        <option value="$PROJECT_DIR$/src/TProgressBar.java" />
+        <option value="$PROJECT_DIR$/src/HeadsetValues.java" />
         <option value="$PROJECT_DIR$/src/ThinkGearWrapper.java" />
         <option value="$PROJECT_DIR$/src/DrawbotGUI.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="22" />
-    <option name="y" value="5" />
-    <option name="width" value="1821" />
-    <option name="height" value="975" />
+    <option name="x" value="2" />
+    <option name="width" value="1167" />
+    <option name="height" value="720" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -227,21 +234,52 @@
     </navigator>
     <panes>
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Drawbot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Drawbot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Drawbot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="241" />
-    <property name="project.structure.last.edited" value="Libraries" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="241" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="75" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="241" />
-    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
@@ -265,13 +303,13 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Application.DrawbotGUI">
     <configuration default="false" name="DrawbotGUI" type="Application" factoryName="Application" temporary="true">
@@ -310,19 +348,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -348,6 +373,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -456,25 +494,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="22" y="5" width="1821" height="975" extended-state="0" />
+    <frame x="2" y="0" width="1167" height="720" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292232" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291367" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43649817" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08453237" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292232" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3267571" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32553956" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17245305" sideWeight="0.6732429" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17225748" sideWeight="0.6366907" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24871941" sideWeight="0.6732429" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5437731" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21577516" sideWeight="0.6366907" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36330935" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292232" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -552,9 +590,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12656#12686#1" expanded="true" />
-            <element signature="e#12853#12861#0" expanded="true" />
+            <element signature="e#12740#12770#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -563,9 +599,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12656#12686#1" expanded="true" />
-            <element signature="e#12853#12861#0" expanded="true" />
+            <element signature="e#12740#12770#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -574,9 +608,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12656#12686#1" expanded="true" />
-            <element signature="e#12853#12861#0" expanded="true" />
+            <element signature="e#12740#12770#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -585,9 +617,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12656#12686#1" expanded="true" />
-            <element signature="e#12853#12861#0" expanded="true" />
+            <element signature="e#12740#12770#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -596,20 +626,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12656#12686#1" expanded="true" />
-            <element signature="e#12853#12861#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DrawbotGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12656#12686#1" expanded="true" />
-            <element signature="e#12853#12861#0" expanded="true" />
+            <element signature="e#12740#12770#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -635,13 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HeadsetValues.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="12" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.3319149">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/com/sun/java/swing/plaf/gtk/GTKFileChooserUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="6" selection-start="889" selection-end="889" vertical-scroll-proportion="0.3596154" />
@@ -657,9 +667,7 @@
     <entry file="file://$PROJECT_DIR$/src/neurosky/ThinkGearSocket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="86" column="28" selection-start="3074" selection-end="3089" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#13510#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -670,20 +678,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/TProgressBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="19" selection-start="1752" selection-end="1752" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HeadsetValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="0" selection-start="1609" selection-end="1827" vertical-scroll-proportion="-5.16">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ThinkGearWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="54" selection-start="541" selection-end="541" vertical-scroll-proportion="-3.2">
-          <folding />
+        <state line="18" column="34" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DrawbotGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="157" selection-start="140" selection-end="140" vertical-scroll-proportion="-7.1410656">
+        <state line="1164" column="43" selection-start="36674" selection-end="36674" vertical-scroll-proportion="0.67286247">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12656#12686#1" expanded="true" />
-            <element signature="e#12853#12861#0" expanded="true" />
+            <element signature="e#12740#12770#1" expanded="true" />
           </folding>
         </state>
       </provider>

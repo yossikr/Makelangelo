@@ -49,7 +49,8 @@ public class DrawbotGUI
 {
 	// software version
 	static final String version="1";
-	
+
+    private static final int[] MOTOR_SPEED_OPTIONS = {1000, 1300, 1600, 1900, 2300};
 	static final long serialVersionUID=1;
 	
 	private static DrawbotGUI singletonObject;
@@ -1144,58 +1145,93 @@ public class DrawbotGUI
         String current_line;
         int current_line_index;
 
-        String swap_line = null;
-        int swap_line_index;
-
-        int i;
-        int number_of_switch_lines = 4;
+        String manipulated_line = null;
+        int manipulated_line_index;
 
         Double x = 0.0;
         Double y = 0.0;
+        ArrayList<Integer> g1_lines_indexs;
 
-        boolean is_relaxed = thinkGearWrapper.isRelaxed();
-        boolean is_attentive = thinkGearWrapper.isAttentive();
-
-        // If you are focused all will stay the same no matter what your mood is.
-        if (is_attentive) return;
-
-
+        g1_lines_indexs = new  ArrayList<Integer>();
         current_line_index= (int)gcode.linesProcessed;
         current_line=gcode.lines.get(current_line_index).trim();
 
-        // replacing only gcode lines
-        if (! current_line.startsWith("G1 ")) {
+        // We will replace gcode lines for each
+        if (! current_line.startsWith("(Polyline")) {
             return;
         }
 
+        boolean is_attentive = thinkGearWrapper.isAttentive();
+
+        int no_of_meditation_levels = MOTOR_SPEED_OPTIONS.length;
+        int meditation_range = (100/no_of_meditation_levels) + 1;
+
+        int meditation_level = (meditation_range / thinkGearWrapper.getAvgMeditation());
+        int new_speed = MOTOR_SPEED_OPTIONS[meditation_level];
 
 
-        //If Relaxed Switch to a close Line
-        // If not switch to a Far Line
-        if (is_relaxed) {
-            swap_line_index = current_line_index + 4;
-        }
-        else {
-            swap_line_index = current_line_index + 25;
-        }
+        manipulated_line_index =  current_line_index + 1;
 
-        // replace with the next G1 after the place where we are
-        while(swap_line_index <gcode.linesTotal) {
-            swap_line = gcode.lines.get(swap_line_index).trim();
-            if (swap_line.startsWith("G1 ")) {
+        // Change the seed of the next lines till we reach PolyLine
+        while(manipulated_line_index <gcode.linesTotal) {
+            manipulated_line = gcode.lines.get(manipulated_line_index).trim();
+            if (manipulated_line.startsWith("(Polyline") || manipulated_line.startsWith("(end")) {
                 break;
             }
-            swap_line_index++;
+
+            if (manipulated_line.startsWith("G1 ")) {
+
+                String [] tokens = current_line.split("\\s");
+
+                // Now we are in a G1 command lets get X and Y
+                if (tokens[1].startsWith("X")){
+                    String tmp = tokens[1].substring(1);
+                    x =  Double.parseDouble(tmp) ;
+                }
+                else {
+                    //Todo: error in gc
+                    continue;
+                }
+
+                if (tokens[2].startsWith("Y")){
+                    String tmp = tokens[2].substring(1);
+                    x =  Double.parseDouble(tmp) ;
+                }
+                else {
+                    //Todo: error in gc
+                    continue;
+                }
+
+                String new_line = "G1 X" + x + " Y" + y + " F" +new_speed;
+                gcode.lines.set(manipulated_line_index, new_line);
+
+                // collect the the G1 Lines so we can exchange them later and create a star
+                g1_lines_indexs.add(new Integer(manipulated_line_index));
+            }
+            manipulated_line_index++;
         }
 
-        // If we got to the end
-        if (swap_line_index >= gcode.linesTotal) {
-              return;
+        // if you are paying attention we give you a star
+        // The way we create  a general Star from all the G1 lines is:
+        // 1: Remove the index of first point from list
+        // 2: Keep the value of the last Index and remove it from List too.
+        // 3: take every other point from the remaining index and place it near the end;
+
+        if (is_attentive && (g1_lines_indexs.size() > 4)) {
+            g1_lines_indexs.remove(0);
+            int last_g1_for_this_polyline_index = g1_lines_indexs.get(g1_lines_indexs.get(g1_lines_indexs.size()-1));
+            g1_lines_indexs.remove(g1_lines_indexs.size()-1);
+
+            for (int i = 0; i<g1_lines_indexs.size(); i+=2) {
+                int line_to_move_index =  g1_lines_indexs.get(i);
+                String line_to_move =  gcode.lines.get(line_to_move_index);
+                gcode.lines.add(last_g1_for_this_polyline_index, line_to_move);
+                gcode.lines.remove(line_to_move_index);
+            }
+
         }
 
 
-        gcode.lines.set(swap_line_index, current_line);
-        gcode.lines.set(current_line_index, swap_line);
 
         /*Todo: Is delay needed at all is it enough
         try {

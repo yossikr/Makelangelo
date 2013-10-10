@@ -66,11 +66,13 @@ public class HeadsetValues {
     }
 
     public void clearLast() {
-        if (meditation.size() > 0) {
-            meditation.remove(meditation.size()-1);
-        }
-        if (attention.size() > 0) {
-            attention.remove(attention.size()-1);
+        synchronized(this) {
+            if (meditation.size() > 0) {
+                meditation.remove(meditation.size()-1);
+            }
+            if (attention.size() > 0) {
+                attention.remove(attention.size()-1);
+            }
         }
     }
 }
