@@ -16,8 +16,8 @@ public class ThinkGearWrapper extends PApplet {
     public ThinkGearSocket neuroSocket;
     public int attention=10;
     public int meditation=10;
-    public int attention_treshold=0;
-    public int meditation_treshold=0;
+    public int attention_treshold=50;
+    public int meditation_treshold=50;
     public PFont font;
     HeadsetValues eegValues;
     //TProgressBar  progress;

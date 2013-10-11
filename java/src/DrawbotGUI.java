@@ -1181,7 +1181,7 @@ public class DrawbotGUI
 
             if (manipulated_line.startsWith("G1 ")) {
 
-                String [] tokens = current_line.split("\\s");
+                String [] tokens = manipulated_line.split("\\s");
 
                 // Now we are in a G1 command lets get X and Y
                 if (tokens[1].startsWith("X")){
@@ -1195,14 +1195,14 @@ public class DrawbotGUI
 
                 if (tokens[2].startsWith("Y")){
                     String tmp = tokens[2].substring(1);
-                    x =  Double.parseDouble(tmp) ;
+                    y =  Double.parseDouble(tmp) ;
                 }
                 else {
                     //Todo: error in gc
                     continue;
                 }
 
-                String new_line = "G1 X" + x + " Y" + y + " F" +new_speed;
+                String new_line = "G1 X" + x + " Y" + y + " F" + new_speed;
                 gcode.lines.set(manipulated_line_index, new_line);
 
                 // collect the the G1 Lines so we can exchange them later and create a star
@@ -1219,7 +1219,7 @@ public class DrawbotGUI
 
         if (is_attentive && (g1_lines_indexs.size() > 4)) {
             g1_lines_indexs.remove(0);
-            int last_g1_for_this_polyline_index = g1_lines_indexs.get(g1_lines_indexs.get(g1_lines_indexs.size()-1));
+            int last_g1_for_this_polyline_index = g1_lines_indexs.get(g1_lines_indexs.size()-1);
             g1_lines_indexs.remove(g1_lines_indexs.size()-1);
 
             for (int i = 0; i<g1_lines_indexs.size(); i+=2) {
