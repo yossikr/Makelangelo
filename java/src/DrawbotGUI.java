@@ -36,6 +36,7 @@ import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.prefs.Preferences;
+import static java.lang.System.out;
 
 
 
@@ -50,7 +51,7 @@ public class DrawbotGUI
 	// software version
 	static final String version="1";
 
-    private static final int[] MOTOR_SPEED_OPTIONS = {1000, 1300, 1600, 1900, 2300};
+    private static final int[] MOTOR_SPEED_OPTIONS = {2300, 2300, 2300, 1900, 1900, 1600, 1600, 1300, 1300,1300};
 	static final long serialVersionUID=1;
 	
 	private static DrawbotGUI singletonObject;
@@ -1164,11 +1165,18 @@ public class DrawbotGUI
         boolean is_attentive = thinkGearWrapper.isAttentive();
 
         int no_of_meditation_levels = MOTOR_SPEED_OPTIONS.length;
-        int meditation_range = (100/no_of_meditation_levels) + 1;
-
-        int meditation_level = (meditation_range / thinkGearWrapper.getAvgMeditation());
+        int meditation_range = (100/no_of_meditation_levels);
+        int avg_meditation = thinkGearWrapper.getAvgMeditation();
+        int meditation_level = (avg_meditation/meditation_range);
+        if (meditation_level >= no_of_meditation_levels);
+        meditation_level = no_of_meditation_levels - 1;
         int new_speed = MOTOR_SPEED_OPTIONS[meditation_level];
 
+        System.out.println("==> no_of_meditation_levels = " + no_of_meditation_levels);
+        System.out.println("==> meditation_range = " + meditation_range);
+        System.out.println("==> avg_meditation " + avg_meditation);
+        System.out.println("==> meditation_level = " + meditation_level);
+        System.out.println("==> new_speed = " + new_speed);
 
         manipulated_line_index =  current_line_index + 1;
 

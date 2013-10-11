@@ -28,7 +28,7 @@ public class ThinkGearWrapper extends PApplet {
 
         //this.progress=new TProgressBar(this, 300,50,10,100);
         ThinkGearSocket neuroSocket = new ThinkGearSocket(this);
-        eegValues = new HeadsetValues(10);
+        eegValues = new HeadsetValues(1);
 
         try {
             neuroSocket.start();
