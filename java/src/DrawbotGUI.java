@@ -1162,25 +1162,49 @@ public class DrawbotGUI
             return;
         }
 
+
+        //attention as boolean yes/no
         boolean is_attentive = thinkGearWrapper.isAttentive();
 
+
+        //attention level as bins
+        int no_of_attention_levels = 5;
+        int attention_range = (100/no_of_attention_levels) + 1;
+
+        int attention_level = (thinkGearWrapper.getAvgAttention() / attention_range );
+
+        //switch (attention_level)
+
+
+
         int no_of_meditation_levels = MOTOR_SPEED_OPTIONS.length;
+<<<<<<< .mine
+        int meditation_range = (100/no_of_meditation_levels) + 1;
+
+        int meditation_level = (thinkGearWrapper.getAvgMeditation() / meditation_range );
+=======
         int meditation_range = (100/no_of_meditation_levels);
         int avg_meditation = thinkGearWrapper.getAvgMeditation();
         int meditation_level = (avg_meditation/meditation_range);
         if (meditation_level >= no_of_meditation_levels);
         meditation_level = no_of_meditation_levels - 1;
         int new_speed = MOTOR_SPEED_OPTIONS[meditation_level];
+>>>>>>> .r193
 
+<<<<<<< .mine
+        int new_speed = MOTOR_SPEED_OPTIONS[4-meditation_level];
+=======
         System.out.println("==> no_of_meditation_levels = " + no_of_meditation_levels);
         System.out.println("==> meditation_range = " + meditation_range);
         System.out.println("==> avg_meditation " + avg_meditation);
         System.out.println("==> meditation_level = " + meditation_level);
         System.out.println("==> new_speed = " + new_speed);
+>>>>>>> .r193
+
 
         manipulated_line_index =  current_line_index + 1;
 
-        // Change the seed of the next lines till we reach PolyLine
+        // Change the speed of the next lines till we reach PolyLine
         while(manipulated_line_index <gcode.linesTotal) {
             manipulated_line = gcode.lines.get(manipulated_line_index).trim();
             if (manipulated_line.startsWith("(Polyline") || manipulated_line.startsWith("(end")) {
@@ -1225,22 +1249,111 @@ public class DrawbotGUI
         // 2: Keep the value of the last Index and remove it from List too.
         // 3: take every other point from the remaining index and place it near the end;
 
-        if (is_attentive && (g1_lines_indexs.size() > 4)) {
-            g1_lines_indexs.remove(0);
-            int last_g1_for_this_polyline_index = g1_lines_indexs.get(g1_lines_indexs.size()-1);
-            g1_lines_indexs.remove(g1_lines_indexs.size()-1);
+        //if (is_attentive && (g1_lines_indexs.size() > 4)) {
+        //    g1_lines_indexs.remove(0);
+        //    int last_g1_for_this_polyline_index = g1_lines_indexs.get(g1_lines_indexs.size()-1);
+        //    g1_lines_indexs.remove(g1_lines_indexs.size()-1);
+        //
+        //   for (int i = 0; i<g1_lines_indexs.size(); i+=2) {
+        //        int line_to_move_index =  g1_lines_indexs.get(i);
+        //        String line_to_move =  gcode.lines.get(line_to_move_index);
+        //        gcode.lines.add(last_g1_for_this_polyline_index, line_to_move);
+        //        gcode.lines.remove(line_to_move_index);
+        //    }
+        //
+        //}
 
-            for (int i = 0; i<g1_lines_indexs.size(); i+=2) {
-                int line_to_move_index =  g1_lines_indexs.get(i);
-                String line_to_move =  gcode.lines.get(line_to_move_index);
-                gcode.lines.add(last_g1_for_this_polyline_index, line_to_move);
-                gcode.lines.remove(line_to_move_index);
+
+        ArrayList<Double> Xvals = new ArrayList<Double>();
+        ArrayList<Double> Yvals = new ArrayList<Double>();
+        ArrayList<Integer> Fvals = new ArrayList<Integer>();
+
+          //MAKE CIRCLES BIGGER OR SMALLER - first phase find middle of circle
+        if (g1_lines_indexs.size() > 3) {
+
+            for (int i = 0; i<g1_lines_indexs.size(); i++) {
+                manipulated_line_index =  g1_lines_indexs.get(i);
+                manipulated_line = gcode.lines.get(manipulated_line_index).trim();
+                String [] tokens = manipulated_line.split("\\s");
+
+
+                // extract X and Y values from Gcode
+
+                if (tokens[1].startsWith("X")){
+                    String tmp = tokens[1].substring(1);
+                    Xvals.add(Double.parseDouble(tmp));
+                }
+                else {
+                    //Todo: error in gc
+                    continue;
+                }
+
+                if (tokens[2].startsWith("Y")){
+                    String tmp = tokens[2].substring(1);
+                    Yvals.add(Double.parseDouble(tmp));
+                }
+                else {
+                    //Todo: error in gc
+                    continue;
+                }
+
+                if (tokens[3].startsWith("F")){
+                    String tmp = tokens[3].substring(1);
+                    Fvals.add(Integer.parseInt(tmp));
+                }
+                else {
+                    //Todo: error in gc
+                    continue;
+                }
+
+            }
+        }
+            // Find average X and Y values for polyline
+
+            double averageX;
+            double averageY;
+            double sumX = 0;
+            double sumY = 0;
+
+            for (int i = 0; i < Xvals.size(); i++) {
+                sumX += Xvals.get(i);
+                sumY += Yvals.get(i);
+
             }
 
+            averageX = sumX / Xvals.size();
+            averageY = sumY / Yvals.size();
+
+        // Define center coordinate for polyline
+
+        double polyline_center_x=averageX;
+        double polyline_center_y=averageY;
+
+        // Re-write x and y values for polyline array as bigger or smaller using vector between each point and
+        // center of the polyline
+
+        double scale_parameter = 0.6;
+
+        double scale_factor = (attention_level*scale_parameter);   //+1 to prevent zero value
+
+        //  todo: change the number 3 to center of attention bins
+
+        double [] Dist_from_center;
+        for (int i = 0; i < Xvals.size(); i++) {
+            Double Xdist=Xvals.get(i) - polyline_center_x;
+            Double Ydist=Yvals.get(i) - polyline_center_y;
+
+            //Dist_from_center [i] = Math.sqrt((Xdist*Xdist) + (Ydist*Ydist));    //use pythagoras
+
+            Xvals.set(i,polyline_center_x + Xdist*scale_factor);
+            Yvals.set(i,polyline_center_y + Ydist*scale_factor);
         }
 
-
-
+        for (int i = 0; i<g1_lines_indexs.size(); i++) {
+            String new_line = "G1 X" + Xvals.get(i) + " Y" + Yvals.get(i) + " F" + Fvals.get(i);
+            manipulated_line_index = g1_lines_indexs.get(i);
+            gcode.lines.set(manipulated_line_index, new_line);
+        }
         /*Todo: Is delay needed at all is it enough
         try {
             Thread.sleep(150);
