@@ -37,6 +37,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.prefs.Preferences;
 import static java.lang.System.out;
+import java.text.DecimalFormat;
 
 
 
@@ -1178,28 +1179,21 @@ public class DrawbotGUI
 
 
         int no_of_meditation_levels = MOTOR_SPEED_OPTIONS.length;
-<<<<<<< .mine
-        int meditation_range = (100/no_of_meditation_levels) + 1;
+
+        int meditation_range = (100/no_of_meditation_levels);
 
         int meditation_level = (thinkGearWrapper.getAvgMeditation() / meditation_range );
-=======
-        int meditation_range = (100/no_of_meditation_levels);
-        int avg_meditation = thinkGearWrapper.getAvgMeditation();
-        int meditation_level = (avg_meditation/meditation_range);
-        if (meditation_level >= no_of_meditation_levels);
-        meditation_level = no_of_meditation_levels - 1;
-        int new_speed = MOTOR_SPEED_OPTIONS[meditation_level];
->>>>>>> .r193
 
-<<<<<<< .mine
-        int new_speed = MOTOR_SPEED_OPTIONS[4-meditation_level];
-=======
-        System.out.println("==> no_of_meditation_levels = " + no_of_meditation_levels);
-        System.out.println("==> meditation_range = " + meditation_range);
-        System.out.println("==> avg_meditation " + avg_meditation);
-        System.out.println("==> meditation_level = " + meditation_level);
-        System.out.println("==> new_speed = " + new_speed);
->>>>>>> .r193
+        if (meditation_level < 0) {
+            meditation_level = 0;
+        }
+
+        if (meditation_level >=  MOTOR_SPEED_OPTIONS.length) {
+            meditation_level = MOTOR_SPEED_OPTIONS.length-1;
+        }
+        int new_speed = MOTOR_SPEED_OPTIONS[MOTOR_SPEED_OPTIONS.length-meditation_level-1];
+
+
 
 
         manipulated_line_index =  current_line_index + 1;
@@ -1349,8 +1343,10 @@ public class DrawbotGUI
             Yvals.set(i,polyline_center_y + Ydist*scale_factor);
         }
 
+
+        DecimalFormat df = new DecimalFormat("0.00");
         for (int i = 0; i<g1_lines_indexs.size(); i++) {
-            String new_line = "G1 X" + Xvals.get(i) + " Y" + Yvals.get(i) + " F" + Fvals.get(i);
+            String new_line = "G1 X" + df.format(Xvals.get(i)) + " Y" + df.format(Yvals.get(i)) + " F" + Fvals.get(i);
             manipulated_line_index = g1_lines_indexs.get(i);
             gcode.lines.set(manipulated_line_index, new_line);
         }
