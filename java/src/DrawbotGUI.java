@@ -52,7 +52,7 @@ public class DrawbotGUI
 	// software version
 	static final String version="1";
 
-    private static final int[] MOTOR_SPEED_OPTIONS = {2300, 2300, 2300, 1900, 1900, 1600, 1600, 1300, 1300,1300};
+    private static final int[] MOTOR_SPEED_OPTIONS = {2500, 2500, 2300, 2000, 1800, 1600, 1300, 1300, 1000,1000};
 	static final long serialVersionUID=1;
 	
 	private static DrawbotGUI singletonObject;
@@ -1181,8 +1181,8 @@ public class DrawbotGUI
         int no_of_meditation_levels = MOTOR_SPEED_OPTIONS.length;
 
         int meditation_range = (100/no_of_meditation_levels);
-
-        int meditation_level = (thinkGearWrapper.getAvgMeditation() / meditation_range );
+        int avgMeditation = thinkGearWrapper.getAvgMeditation() ;
+        int meditation_level = ( avgMeditation / meditation_range );
 
         if (meditation_level < 0) {
             meditation_level = 0;
@@ -1191,10 +1191,11 @@ public class DrawbotGUI
         if (meditation_level >=  MOTOR_SPEED_OPTIONS.length) {
             meditation_level = MOTOR_SPEED_OPTIONS.length-1;
         }
-        int new_speed = MOTOR_SPEED_OPTIONS[MOTOR_SPEED_OPTIONS.length-meditation_level-1];
+
+        int new_speed = MOTOR_SPEED_OPTIONS[meditation_level];
 
 
-
+        System.out.println("avgMeditation = " + avgMeditation + ", Speed =" +   new_speed);
 
         manipulated_line_index =  current_line_index + 1;
 
